@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - LangMaster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка (Header) -->
+    <header>
+        <div class="container">
+            <div class="logo">LangMaster</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="courses.html">Курсы</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="language">
+                    <button>Язык: Русский</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="form-section">
+        <div class="container">
+            <h2>Регистрация</h2>
+            <form action="welcome.html" method="POST">
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                </div>
+                <div class="form-group">
+                    <label for="email">Электронная почта</label>
+                    <input type="email" id="email" name="email" required placeholder="Введите вашу почту">
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" required placeholder="Введите ваш пароль">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Подтверждение пароля</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Подтвердите ваш пароль">
+                </div>
+                <button type="submit" class="btn-submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
