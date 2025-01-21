@@ -28,7 +28,6 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px; /* Уменьшаем паддинг внутри контейнера шапки */
 }
 
 header .logo {
@@ -42,19 +41,13 @@ header nav ul {
 }
 
 header nav ul li {
-    margin-right: 30px;  /* Увеличиваем отступ между пунктами */
+    margin-right: 20px;
 }
 
 header nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 18px; /* Увеличиваем размер шрифта */
-    font-weight: 500; /* Немного жирнее для улучшения читаемости */
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #4A90E2; /* Добавляем эффект наведения для улучшения UX */
+    font-size: 16px;
 }
 
 header .header-right {
@@ -98,7 +91,7 @@ header .btn-register {
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    font-weight: 600;
+    font-weight: 600; /* Можно использовать Rubik с более жирным начертанием для заголовков */
 }
 
 .hero p {
@@ -124,7 +117,7 @@ header .btn-register {
     text-align: center;
     font-size: 36px;
     margin-bottom: 40px;
-    font-weight: 600;
+    font-weight: 600; /* Можно использовать Rubik с более жирным начертанием для заголовков */
 }
 
 .feature-cards {
