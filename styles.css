@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif; /* Используем шрифт Rubik для всего текста */
+    font-family: 'Rubik', sans-serif;
 }
 
 body {
@@ -14,6 +14,7 @@ body {
 
 .container {
     width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -32,7 +33,7 @@ header .container {
 
 header .logo {
     font-size: 24px;
-    font-weight: 600; /* Можно использовать Rubik с более жирным начертанием для логотипа */
+    font-weight: 600;
 }
 
 header nav ul {
@@ -50,34 +51,22 @@ header nav ul li a {
     font-size: 16px;
 }
 
-header .header-right {
-    display: flex;
-    align-items: center;
-}
-
-header .language button {
-    padding: 8px 12px;
-    border: 1px solid #E0E0E0;
-    background-color: #FFFFFF;
-    cursor: pointer;
-}
-
-header .auth-buttons button {
-    margin-left: 10px;
-    padding: 10px 15px;
+/* Кнопки */
+button {
+    padding: 10px 20px;
     border: none;
-    cursor: pointer;
-}
-
-header .btn-login {
     background-color: #4A90E2;
     color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-header .btn-register {
-    background-color: transparent;
-    border: 2px solid #4A90E2;
-    color: #4A90E2;
+button:hover {
+    background-color: #357ABD;
+}
+
+button:focus {
+    outline: none;
 }
 
 /* Основной блок */
@@ -91,7 +80,6 @@ header .btn-register {
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    font-weight: 600; /* Можно использовать Rubik с более жирным начертанием для заголовков */
 }
 
 .hero p {
@@ -99,58 +87,28 @@ header .btn-register {
     margin-bottom: 30px;
 }
 
-.hero .btn-cta {
-    background-color: #50E3C2;
-    padding: 12px 25px;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-/* Преимущества */
-.features {
-    background-color: #FFFFFF;
-    padding: 60px 0;
-}
-
-.features h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-    font-weight: 600; /* Можно использовать Rubik с более жирным начертанием для заголовков */
-}
-
-.feature-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.feature-card {
-    background-color: #F4F4F4;
-    padding: 20px;
-    width: 30%;
-    text-align: center;
-    border-radius: 8px;
-}
-
-.feature-card h3 {
-    margin-top: 15px;
-    font-size: 24px;
-    font-weight: 500;
-}
-
 /* Курсы */
 .courses {
     padding: 60px 0;
-    background-color: #F9F9F9;
+    background-color: #FFFFFF;
 }
 
-.courses h2 {
+.courses h1 {
     text-align: center;
     font-size: 36px;
     margin-bottom: 40px;
-    font-weight: 600;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.filters select, .filters input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 .course-cards {
@@ -162,10 +120,10 @@ header .btn-register {
 .course-card {
     background-color: #FFFFFF;
     padding: 20px;
-    width: 45%;
+    width: 30%;
     text-align: center;
-    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .course-card img {
@@ -179,12 +137,35 @@ header .btn-register {
 }
 
 .course-card .btn-cta {
-    background-color: #4A90E2;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    margin-top: 15px;
-    cursor: pointer;
+    background-color: #50E3C2;
+    margin-top: 20px;
+}
+
+/* Отзывы */
+.testimonials {
+    background-color: #F4F4F4;
+    padding: 60px 0;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    width: 45%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 /* Подвал */
@@ -216,11 +197,16 @@ footer .social-links a:hover {
         text-align: center;
     }
 
-    .feature-cards, .course-cards {
+    .filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-cards {
         flex-direction: column;
     }
 
-    .feature-card, .course-card {
+    .course-card {
         width: 100%;
     }
 
