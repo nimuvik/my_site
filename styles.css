@@ -97,24 +97,55 @@ header .auth-buttons button {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap; /* Адаптация для маленьких экранов */
 }
 
 .feature-card {
     background-color: #F4F4F4;
     padding: 20px;
-    width: 30%;
+    flex: 1 1 calc(33.33% - 20px); /* Три карточки в строке */
+    max-width: calc(33.33% - 20px);
     text-align: center;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Изображения внутри карточек */
 .feature-card img {
-    width: 100%;  
-    height: auto; 
-    border-radius: 8px;
-    object-fit: cover;
+    width: 100%;        /* Изображение занимает всю ширину контейнера */
+    height: auto;       /* Сохраняет пропорции */
+    max-height: 200px;  /* Ограничение максимальной высоты */
+    border-radius: 8px; /* Скругление углов */
+    object-fit: cover;  /* Гарантирует, что изображение помещается в пределах контейнера */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Заголовки и текст карточек */
 .feature-card h3 {
     margin-top: 15px;
     font-size: 24px;
+}
+
+.feature-card p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 768px) {
+    .feature-card {
+        flex: 1 1 100%; /* Каждая карточка занимает 100% ширины */
+        max-width: 100%;
+    }
+
+    .feature-card img {
+        max-height: 150px; /* Уменьшение высоты изображений для мобильных устройств */
+    }
 }
