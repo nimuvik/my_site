@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - LangMaster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Шапка (Header) -->
+    <header>
+        <div class="container">
+            <div class="logo">LangMaster</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="courses.html">Курсы</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="language">
+                    <button>Язык: Русский</button>
+                </div>
+                <div class="auth-buttons">
+                    <a href="login.html"><button class="btn-login">Войти</button></a>
+                    <a href="register.html"><button class="btn-register">Зарегистрироваться</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Основной контент -->
+    <section class="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+
+            <!-- Форма обратной связи -->
+            <div class="contact-form">
+                <h3>Напишите нам</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Ваш Email</label>
+                        <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" placeholder="Ваше сообщение" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Отправить</button>
+                </form>
+            </div>
+
+            <!-- Контактная информация -->
+            <div class="company-info">
+                <h3>Наша информация</h3>
+                <p><strong>Адрес:</strong> 12345, г. Москва, ул. Примерная, 12</p>
+                <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+                <p><strong>Email:</strong> info@langmaster.ru</p>
+            </div>
+
+            <!-- Карта (Пример, можно заменить на реальную карту) -->
+            <div class="map">
+                <h3>Наше местоположение</h3>
+                <div class="map-container">
+                    <img src="https://via.placeholder.com/800x400" alt="Карта" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LangMaster. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
