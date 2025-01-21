@@ -108,8 +108,8 @@ header .auth-buttons button {
 }
 
 .feature-card img {
-    width: 300px;  /* Ширина */
-    height: 200px; /* Высота */
+    width: 100%;  
+    height: auto; 
     border-radius: 8px;
     object-fit: cover;
 }
