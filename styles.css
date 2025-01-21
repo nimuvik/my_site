@@ -609,6 +609,10 @@ footer .social-links a:hover {
     .review-card {
         width: 100%;
     }
+    
+    .feature-card {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
