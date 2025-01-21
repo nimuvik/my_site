@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif; 
+    font-family: 'Rubik', sans-serif;
 }
 
 body {
@@ -17,70 +17,7 @@ body {
     margin: 0 auto;
 }
 
-/* Шапка */
-header {
-    background-color: #FFFFFF;
-    padding: 20px 0;
-    border-bottom: 2px solid #E0E0E0;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .logo {
-    font-size: 24px;
-    font-weight: 600; 
-}
-
-header nav ul {
-    display: flex;
-    list-style: none;
-}
-
-header nav ul li {
-    margin-right: 30px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px; 
-    font-weight: 500; 
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #4A90E2; 
-}
-
-header .header-right {
-    display: flex;
-    align-items: center;
-}
-
-header .auth-buttons button {
-    margin-left: 10px;
-    padding: 10px 15px;
-}
-
-/* Основной блок */
-.hero {
-    background-color: #4A90E2;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
-/* Преимущества */
+/* Стили для раздела Преимущества */
 .features {
     background-color: #FFFFFF;
     padding: 60px 0;
@@ -97,24 +34,51 @@ header .auth-buttons button {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap; /* Адаптация для маленьких экранов */
 }
 
 .feature-card {
     background-color: #F4F4F4;
     padding: 20px;
-    width: 30%;
+    width: 30%; /* Ширина каждого контейнера */
     text-align: center;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для изображений */
 .feature-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
+    width: 100%; /* Изображение заполняет ширину контейнера */
+    max-width: 200px; /* Максимальная ширина изображения */
+    height: auto; /* Сохраняем пропорции изображения */
+    margin: 0 auto; /* Центрируем изображение */
+    display: block; /* Убираем дополнительные отступы */
+    border-radius: 8px; /* Скругляем углы изображения */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    object-fit: cover; /* Гарантируем, что изображение помещается в заданные размеры */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-card h3 {
-    margin-top: 15px;
-    font-size: 24px;
+/* Анимация при наведении на изображение */
+.feature-card img:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Усиление тени */
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 768px) {
+    .feature-card {
+        width: 100%; /* На маленьких экранах контейнеры занимают всю ширину */
+        margin-bottom: 20px;
+    }
+
+    .feature-card img {
+        max-width: 150px; /* Уменьшаем изображения для небольших экранов */
+    }
 }
