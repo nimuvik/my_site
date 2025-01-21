@@ -569,21 +569,52 @@ footer .social-links a:hover {
 }
 
 /* Адаптивность */
+@media (max-width: 1024px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .course-card {
+        width: 100%;
+    }
+
+    .review-card {
+        width: 45%;
+    }
+}
+
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
         text-align: center;
     }
 
-    .feature-cards, .course-cards {
-        flex-direction: column;
-    }
-
-    .feature-card, .course-card {
+    .course-card {
         width: 100%;
     }
 
+    .review-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
     .hero h1 {
-        font-size: 36px;
+        font-size: 32px;
+    }
+
+    .filters select,
+    .filters input {
+        width: 100%;
+    }
+
+    .review-card img {
+        width: 60px;
+        height: 60px;
     }
 }
