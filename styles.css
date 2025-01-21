@@ -586,46 +586,4 @@ footer .social-links a:hover {
     .hero h1 {
         font-size: 36px;
     }
-
-    .filters {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul {
-        display: none; /* Меню можно переделать в бургер */
-    }
-
-    .header-right {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .course-card,
-    .review-card {
-        width: 100%; /* Одна карточка в строку */
-    }
-
-    .course-cards,
-    .reviews-cards {
-        gap: 15px;
-    }
-}
-@media (max-width: 992px) {
-    .course-card,
-    .review-card {
-        width: calc(50% - 20px); /* Две карточки в строку */
-    }
-}
-
-@media (max-width: 576px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .auth-buttons {
-        flex-direction: column;
-        gap: 5px;
-    }
 }
