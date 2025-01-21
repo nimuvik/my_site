@@ -142,11 +142,11 @@ header .btn-register {
 }
 
 .feature-card img {
-    width: 300px;
-    height: 200px;
-    display: block; /* Убирает дополнительные отступы (которые есть у inline-элементов) */
-    object-fit: cover; /* Альтернатива для обрезки изображения, чтобы оно всегда заполняло контейнер */
-    border-radius: 8px; /* Пример округления углов, если это требуется дизайном */
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 /* Курсы */
