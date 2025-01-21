@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы - LangMaster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Шапка (Header) -->
+    <header>
+        <div class="container">
+            <div class="logo">LangMaster</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="courses.html">Курсы</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной блок Курсов -->
+    <section class="courses">
+        <div class="container">
+            <h1>Наши Курсы</h1>
+            <div class="filters">
+                <select id="category-filter">
+                    <option value="all">Все курсы</option>
+                    <option value="english">Английский язык</option>
+                    <option value="spanish">Испанский язык</option>
+                    <option value="beginner">Для начинающих</option>
+                    <option value="advanced">Для продвинутых</option>
+                </select>
+                <input type="search" id="search" placeholder="Поиск курсов...">
+            </div>
+
+            <div class="course-cards">
+                <div class="course-card">
+                    <img src="english-course.jpg" alt="Курс по английскому">
+                    <h3>Курс по английскому языку</h3>
+                    <p>Для начинающих. Научитесь основам английского с нуля. Видеоуроки и практики.</p>
+                    <button class="btn-cta">Записаться</button>
+                </div>
+                <div class="course-card">
+                    <img src="spanish-course.jpg" alt="Курс по испанскому">
+                    <h3>Курс по испанскому языку</h3>
+                    <p>Углубленный курс для среднего уровня. Современная методика обучения.</p>
+                    <button class="btn-cta">Записаться</button>
+                </div>
+                <div class="course-card">
+                    <img src="english-course2.jpg" alt="Курс по английскому">
+                    <h3>Курс по английскому языку для продвинутых</h3>
+                    <p>Для тех, кто хочет улучшить свою грамматику и произношение на английском.</p>
+                    <button class="btn-cta">Записаться</button>
+                </div>
+            </div>
+
+            <!-- Кнопка Показать еще -->
+            <div class="show-more">
+                <button class="btn-cta">Показать еще</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы студентов -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Отзывы студентов</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <p>"Лучший курс по английскому, который я когда-либо проходил! Все понятно и доступно."</p>
+                    <p>- Ирина, студентка</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Курс по испанскому оказался очень полезным. Теперь я говорю на испанском почти свободно!"</p>
+                    <p>- Олег, студент</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал (Footer) -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LangMaster. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
