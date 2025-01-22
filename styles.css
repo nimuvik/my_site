@@ -631,3 +631,141 @@ footer .social-links a:hover {
         height: 60px;
     }
 }
+
+/* Общие настройки для адаптивности */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Основной контейнер */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Адаптивность для планшетов (ширина экрана до 768px) */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .header-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .features .feature-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .courses .course-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* Адаптивность для телефонов (ширина экрана до 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .btn-cta {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .feature-card img.icon {
+        width: 80px;
+        height: auto;
+    }
+
+    .courses .course-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .auth-buttons button {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Универсальные кнопки */
+button, a.btn-cta {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+/* Изображения и видео */
+img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
