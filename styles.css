@@ -213,6 +213,7 @@ header .btn-register {
     border: none;
     margin-top: 15px;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 /* Отзывы */
