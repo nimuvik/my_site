@@ -687,62 +687,190 @@ body {
     }
 }
 
-/* Адаптивность для телефонов (ширина экрана до 480px) */
-@media (max-width: 480px) {
+/* Адаптивные стили для страниц сайта */
+
+/* Адаптация для больших экранов (ширина больше 1200px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .feature-card {
+        width: 30%;
+    }
+
+    .review-card {
+        width: 30%;
+    }
+
+    .course-card {
+        width: 30%;
+    }
+}
+
+/* Адаптация для планшетов (ширина экрана до 1024px) */
+@media (max-width: 1024px) {
+    header .container {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    header nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .feature-card,
+    .course-card,
+    .review-card {
+        width: 48%;
+    }
+
+    .testimonial-cards,
+    .course-cards,
+    .reviews-cards {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Адаптация для мобильных устройств (ширина экрана до 768px) */
+@media (max-width: 768px) {
     header {
-        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
     }
 
-    .logo {
-        font-size: 1.5rem;
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    nav ul li a {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn-cta {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .feature-card,
+    .course-card,
+    .review-card {
+        width: 100%;
+    }
+
+    .contact-form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .timeline-item {
         font-size: 0.9rem;
     }
+}
 
+/* Адаптация для телефонов (ширина экрана до 480px) */
+@media (max-width: 480px) {
     .hero h1 {
         font-size: 1.5rem;
     }
 
     .hero p {
         font-size: 0.9rem;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .btn-cta {
-        font-size: 0.9rem;
-        padding: 10px 20px;
+        font-size: 0.8rem;
+        padding: 8px 15px;
     }
 
-    .feature-card img.icon {
-        width: 80px;
-        height: auto;
+    header .logo {
+        font-size: 1.2rem;
     }
 
-    .courses .course-card img {
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    .feature-card,
+    .course-card,
+    .review-card {
         width: 100%;
-        height: auto;
     }
 
     footer p {
         font-size: 0.8rem;
     }
 
-    .auth-buttons button {
+    .contact-form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .timeline-item {
+        padding: 10px;
         font-size: 0.8rem;
-        padding: 8px 15px;
+    }
+
+    .filters select,
+    .filters input {
+        width: 100%;
+    }
+
+    .team-member img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .map-container {
+        height: 200px;
     }
 }
 
-/* Универсальные кнопки */
-button, a.btn-cta {
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 1rem;
+/* Универсальные улучшения */
+html {
+    scroll-behavior: smooth;
 }
 
-/* Изображения и видео */
+button, a.btn-cta {
+    transition: all 0.3s ease;
+}
+
+button:hover, a.btn-cta:hover {
+    background-color: #357ABD;
+    color: #FFF;
+}
+
 img, iframe {
     max-width: 100%;
     height: auto;
